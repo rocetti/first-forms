@@ -4,14 +4,32 @@
     padding: 0px;
     border: 0px;
 }
-
+/*BACKGROUND*/
 body{
+    background-color: #191927;
     background-image: url("./img/bg-img.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
-
+.body-shade{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: -1;
+}
+/*CONTENT*/
+body{
+    display: flex;
+    flex-direction: column;
+}
+/*HERO*/
 .hero-logo{
     width: clamp(1rem, 5rem, 10rem);
+}
+/*SUBSCRIBE CARD*/
+/*FOOTER*/
+footer{
+    margin-top: auto;
 }

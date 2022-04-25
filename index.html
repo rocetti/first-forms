@@ -4,45 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Subscribe Here</title>
 </head>
 <body>
     <div class="hero">
-        <img src="" alt="" class="hero-logo">
-        <p class="hero-title"></p>
+        <img src="./img/SubscribeHere-logo.svg" alt="" class="hero-logo">
+        <p class="hero-title">SUBSCRIBE HERE</p>
     </div>
-    <div class="body">
+    <div class="content">
         <div class="intro">
-            <p class="intro-txt"></p>
+            <p class="intro-txt">Looking for another place to subscribe and leave your data so we can sell it? Welcome to Subscribe Here, a place where you can send us all your info and be assured that its safely stored and sold!</p>
         </div>
         <form action="" class="form">
-            <fieldset>
-                <legend>Name</legend>
-                <label for="first-name">FIRST NAME</label>
-                <input type="text" name="first-name" id="first-name">
-                <label for="last-name">LAST NAME</label>
-                <input type="text" name="last-name" id="last-name">
-            </fieldset>
-            <fieldset>
-                <legend>Contact</legend>
-                <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email">
-                <label for="phone">PHONE NUMBER</label>
-                <input type="tel" name="phone" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
-            </fieldset>
-            <fieldset>
-                <legend>Password</legend>
-                <label for="password">PASSWORD</label>
-                <input type="password" name="password" id="password">
-                <label for="password-confirm">CONFIRM PASSWORD</label>
-                <input type="password" name="password-confirm" id="password-confirm">
-            </fieldset>
+            <div class="form-fields">
+                <fieldset>
+                    <legend>Name</legend>
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" name="first-name" id="first-name" required>
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" name="last-name" id="last-name" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact</legend>
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" name="phone" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{2,3}\)?[\s.-]\d{3,5}[\s.-]\d{4}$" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Password</legend>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password" required>
+                    <label for="password-confirm">CONFIRM PASSWORD</label>
+                    <input type="password" name="password-confirm" id="password-confirm" required>
+                </fieldset>
+            </div>
+            <button type="submit" class="form-button">Create Account</button>
+            <div class="login">
+                <p class="login-txt">Already have an account? <a href="" class="login-link">Log in</a></p>
+            </div>
         </form>
-        <button type="submit">Create Account</button>
-        <div class="login">
-            <p>Already have an account?</p>
-            <a href="">Log in</a>
-        </div>
     </div>
     <footer>All rights reserved to Eredah &copy;</footer>
 </body>

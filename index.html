@@ -20,26 +20,35 @@
             </div>
             <form action="" class="form">
                 <div class="form-fields">
-                    <fieldset>
-                        <legend>Name</legend>
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name" id="first-name" required>
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name" required>
+                    <fieldset class="form-fields-name">
+                        <div id="form-fname">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" name="first-name" id="first-name" required>
+                        </div>
+                        <div id="form-lname">
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" name="last-name" id="last-name" required>
+                        </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Contact</legend>
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email" required>
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" name="phone" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{2,3}\)?[\s.-]\d{3,5}[\s.-]\d{4}$" required>
+                    <fieldset class="form-fields-contact">
+                        <div id="form-email">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div id="form-tel">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" name="phone" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{2,3}\)?[\s.-]\d{3,5}[\s.-]\d{4}$" required>
+                        </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Password</legend>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password" required>
-                        <label for="password-confirm">CONFIRM PASSWORD</label>
-                        <input type="password" name="password-confirm" id="password-confirm" required>
+                    <fieldset class="form-fields-password">
+                        <div id="form-password">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+                        <div id="form-password-confirm">
+                            <label for="password-confirm">CONFIRM PASSWORD</label>
+                            <input type="password" name="password-confirm" id="password-confirm" required>
+                        </div>
                     </fieldset>
                 </div>
                 <button type="submit" class="form-button">Create Account</button>

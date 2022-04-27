@@ -18,40 +18,43 @@
             <div class="card-intro">
                 <p class="card-intro-txt">Looking for another place to subscribe and leave your data so we can sell it? Welcome to Subscribe Here, a place where you can send us all your info and be assured that its safely stored and sold!</p>
             </div>
-            <form action="" class="form">
+            <form action="" id="form">
                 <div class="form-fields">
                     <fieldset class="form-fields-name">
                         <div id="form-fname">
                             <label for="first-name">FIRST NAME</label>
-                            <input type="text" name="first-name" id="first-name" required>
+                            <input type="text" name="first-name" class="input" id="first-name" required>
                         </div>
                         <div id="form-lname">
                             <label for="last-name">LAST NAME</label>
-                            <input type="text" name="last-name" id="last-name" required>
+                            <input type="text" name="last-name" class="input" id="last-name" required>
                         </div>
                     </fieldset>
                     <fieldset class="form-fields-contact">
                         <div id="form-email">
                             <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email" class="input" id="email" required>
                         </div>
                         <div id="form-tel">
                             <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" name="phone" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{2,3}\)?[\s.-]\d{3,5}[\s.-]\d{4}$" required>
+                            <input type="tel" name="phone" class="input" id="phone" pattern="^(\+\d{1,2}\s)?\(?\d{2,3}\)?[\s.-]\d{3,5}[\s.-]\d{4}$" required>
                         </div>
                     </fieldset>
                     <fieldset class="form-fields-password">
                         <div id="form-password">
                             <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password" required>
+                            <input type="password" name="password" class="input" id="password" required>
                         </div>
                         <div id="form-password-confirm">
                             <label for="password-confirm">CONFIRM PASSWORD</label>
-                            <input type="password" name="password-confirm" id="password-confirm" required>
+                            <input type="password" name="password-confirm" class="input" id="password-confirm" required>
                         </div>
                     </fieldset>
+                    <div class="error-wrap">
+                        <p id="error-msg">* Passwords do not match</p>
+                    </div>
                 </div>
-                <button type="submit" class="form-button">Create Account</button>
+                <button type="submit" id="form-button">Create Account</button>
                 <div class="login">
                     <p class="login-txt">Already have an account? <a href="" class="login-link">Log in</a></p>
                 </div>
@@ -61,4 +64,18 @@
     </div>
     <footer>All rights reserved to Eredah &copy;</footer>
 </body>
+<script>
+    const forms = document.getElementById("form");
+    forms.addEventListener("submit", e => {
+        const password = document.getElementById("password");
+        const passwordConfirm = document.getElementById("password-confirm");
+        const errorMsg = document.getElementById("error-msg");
+        if (password.value !== passwordConfirm.value) {
+            e.preventDefault();
+            password.classList.add("error");
+            passwordConfirm.classList.add("error");
+            errorMsg.style.display = "block";
+        }
+    })
+</script>
 </html>
